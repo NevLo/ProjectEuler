@@ -6,7 +6,7 @@ import math
 def isPrime(num):
     if(num <= 1):
         return False
-    for i in range (2, int(math.sqrt(num))):
+    for i in range (2, int(math.sqrt(num))+1):
         if(num % i == 0):
             return False
     return True
@@ -24,10 +24,12 @@ def findHighestPrimeFactor(number):
                 testPrime += 1
     return testPrime
 
-print("Highest prime factor of 12: ")
-print(findHighestPrimeFactor(12))
-print("Highest prime factor of 13195: ")
-print(findHighestPrimeFactor(13195))
-print("Highest prime factor of 600851475143: ")
-print(findHighestPrimeFactor(600851475143))
-print()
+
+if __name__ == "__main__":  
+    print("Highest prime factor of 12: ")
+    print(findHighestPrimeFactor(12))
+    print("Highest prime factor of 13195: ")
+    print(findHighestPrimeFactor(13195))
+    print("Highest prime factor of 600851475143: ")
+    print(findHighestPrimeFactor(600851475143))
+    print()

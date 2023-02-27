@@ -5,19 +5,16 @@
 # By considering the terms in the Fibonacci sequence whose values 
 # do not exceed four million, find the sum of the even-valued terms.
 
-
-sum = 0
-
-a = 1
-b = 1
-c = 0
-
-while c < 4000000:
-    c = a+b
-    a = b
-    b = c
-    if(c % 2 == 0):
-        #print(c)
-        sum += c
-
-print(sum)
+if __name__ == "__main__":  
+    sum = 0
+    a = 1
+    b = 1
+    c = 0
+    while c < 4000000:
+        c = a+b
+        a = b
+        b = c
+        if(c % 2 == 0):
+            #print(c)
+            sum += c
+    print(sum)

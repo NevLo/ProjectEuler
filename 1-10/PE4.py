@@ -11,20 +11,16 @@ def isPalindrome(number):
             return False
     return True
 
-
-
-maxPalindrome = 0
-palinI = 0
-palinJ = 0
-for i in range(100,1000):
-    for j in range(100,1000):
-        test = i * j
-        if(isPalindrome(test)):
-            if(test > maxPalindrome):
+if __name__ == "__main__":  
+    maxPalindrome = 0
+    palinI = 0
+    palinJ = 0
+    for i in range(100,1000):
+        for j in range(100,1000):
+            test = i * j
+            if(isPalindrome(test) and test > maxPalindrome):
                 maxPalindrome = test
                 palinI = i
                 palinJ = j
-
-
-print("The maximum palindrome of a product of two 3-digit numbers is :")
-print(f"{palinI} * {palinJ} = {maxPalindrome}")
+    print("The maximum palindrome of a product of two 3-digit numbers is :")
+    print(f"{palinI} * {palinJ} = {maxPalindrome}")
